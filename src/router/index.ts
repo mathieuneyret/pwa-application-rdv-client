@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import AddRdv from '../views/AddRdv.vue'
 import Login from '../views/Login.vue'
 import Register from '../views/Register.vue'
+import ListRdv from '../views/ListRdv.vue'
 import {supabase} from "../supabase";
 
 const routes = [
@@ -22,6 +23,14 @@ const routes = [
         path: '/register',
         name: 'Register',
         component: Register
+    },
+    {
+        path: '/listrdv',
+        name: 'ListRdv',
+        component: ListRdv,
+        meta: {
+            requiresAuth: true
+        }
     }
 ]
 

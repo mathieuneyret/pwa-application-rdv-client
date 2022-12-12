@@ -3,22 +3,17 @@
 </script>
 
 <template>
-  <router-link to="/">AddRdv</router-link>
-  <router-link to="/login">Login</router-link>
-  <router-link to="/register">Register</router-link>
+  <div class="menu-link">
+    <router-link to="/">Ajouter rdv</router-link>
+    <router-link to="/listrdv">Liste des rdv</router-link>
+    <router-link to="/login">Login</router-link>
+    <router-link to="/register">Register</router-link>
+  </div>
   <router-view></router-view>
 </template>
 
 <style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
+.menu-link a {
+  padding: 5px;
 }
 </style>

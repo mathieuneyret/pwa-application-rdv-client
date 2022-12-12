@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import {onMounted, ref} from 'vue'
 import { supabase } from "../supabase"
-import router from '../router'
+import router from "../router";
 
 const dateRdv = ref('')
 const heureRdv = ref('')
@@ -41,7 +41,7 @@ async function priseRDV() {
           )
         `)
         .eq('clients.email_user', user?.email)*/
-    console.log(rdv)
+    await router.push({ name: 'ListRdv' })
   } catch (error) {
     if (error instanceof Error) {
       alert(error.message)
