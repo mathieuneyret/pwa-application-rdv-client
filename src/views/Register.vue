@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { supabase } from "../supabase"
+import router from '../router'
 
 const loading = ref(false)
 const email = ref('')
@@ -13,7 +14,7 @@ async function signUp() {
       password: password.value,
     })
     if (error) throw error
-    alert("Youpi t'a crée un compte !")
+    await router.push({ name: 'AddRdv' })
   } catch (error) {
     if (error instanceof Error) {
       alert(error.message)

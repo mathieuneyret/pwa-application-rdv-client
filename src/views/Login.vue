@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
 import { supabase } from "../supabase"
+import router from '../router'
 
 const loading = ref(false)
 const email = ref('')
@@ -15,7 +16,7 @@ async function signInWithEmail() {
     })
     if (error) throw error
     const { data: { user } } = await supabase.auth.getUser()
-    alert("Youpi tu es connecté " + user?.email +" !")
+    await router.push({ name: 'AddRdv' })
   } catch (error) {
     if (error instanceof Error) {
       alert(error.message)
