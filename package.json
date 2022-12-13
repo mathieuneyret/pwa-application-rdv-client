@@ -9,6 +9,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@fullcalendar/core": "^5.11.3",
+    "@fullcalendar/timegrid": "^5.11.3",
+    "@fullcalendar/vue3": "^5.11.3",
     "@supabase/supabase-js": "^2.1.1",
     "calendar-link": "^2.4.0",
     "vue": "^3.2.41",
