@@ -1,14 +1,14 @@
 <script setup lang="ts">
 import '@fullcalendar/core/vdom'
 import FullCalendar from "@fullcalendar/vue3"
-import { reactive } from 'vue'
+import {reactive} from 'vue'
 import {onMounted, ref} from 'vue'
 import { supabase } from "../supabase"
 import { ics } from "calendar-link"
 import dayGridPlugin from '@fullcalendar/daygrid'
 
-const listRdv = ref([])
-const calendarRdv = ref([])
+const listRdv = ref<any>([])
+const calendarRdv = ref<any>([])
 
 onMounted(async() => {
 

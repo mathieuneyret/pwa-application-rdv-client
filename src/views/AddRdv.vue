@@ -6,7 +6,7 @@ import router from "../router";
 const dateRdv = ref('')
 const heureRdv = ref('')
 const prestataire_select = ref('')
-const prestataires = ref([])
+const prestataires = ref<any>([])
 
 onMounted(async() => {
   const { data: prestataire } = await supabase
@@ -23,7 +23,6 @@ async function priseRDV() {
         .from('clients')
         .select('id')
         .eq('email_user', user?.email)
-    console.log(userClient[0].id)
     const { data: rdv } = await supabase
         .from('prise_rdv')
         .insert([
